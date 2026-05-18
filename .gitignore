@@ -1,0 +1,12 @@
+.venv/
+.env
+.pulumi-home
+.pulumi-state
+
+# .gitignore
+*.tfvars
+*.tfvars.json
+**/.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.tfstate.lock.info
