@@ -21,3 +21,15 @@ variable "publicly_visible" {
   type        = bool
   default     = false
 }
+
+variable "regions" {
+  description = "AWS regions used for multi-region bucket deployment"
+  type        = list(string)
+  default     = ["us-east-1", "us-west-2"]
+}
+
+variable "bucket_name_prefix" {
+  description = "Prefix used to build unique multi-region S3 bucket names"
+  type        = string
+  default     = "multi-region-bucket"
+}

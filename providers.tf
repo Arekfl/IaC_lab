@@ -1,19 +1,4 @@
 terraform {
-  required_version = ">=1.7.0"
-  # Note that previously we did not declare terraform version. 
-  # In this scenario terraform will not validate terraform version 
-  # but try to resolve with installed one.
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-    github = {
-      source  = "integrations/github"
-      version = "~> 5.0"
-    }
-  }
-
   # configure remote backend
   backend "s3" {
     region = "us-east-1"
@@ -28,8 +13,4 @@ terraform {
     # dynamodb_table = "terraform-lock" 
     # you can omit this one for now.
   }
-}
-
-provider "aws" {
-  region = "us-east-1"
 }
